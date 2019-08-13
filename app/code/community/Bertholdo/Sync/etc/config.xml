@@ -1,0 +1,131 @@
+<?xml version="1.0"?>
+<config>
+    <modules> <!-- modulo -->
+        <Bertholdo_Sync>
+            <version>1.0.3</version>
+        </Bertholdo_Sync>
+    </modules>
+    <global> <!-- global -->
+        <models>
+            <sync>
+                <class>Bertholdo_Sync_Model</class>
+                <resourceModel>sync_mysql4</resourceModel>
+            </sync>
+            <sync_mysql4>
+                <class>Bertholdo_Sync_Model_Mysql4</class>
+            </sync_mysql4>
+        </models>
+        <blocks>
+            <sync>
+                <class>Bertholdo_Sync_Block</class>
+            </sync>
+        </blocks>
+        <helpers>
+            <sync>
+                <class>Bertholdo_Sync_Helper</class>
+            </sync>  
+        </helpers>
+		<resources>
+            <sync_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </sync_write>
+            <sync_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </sync_read>
+        </resources>
+    </global>
+    <admin> <!-- admin -->
+        <routers>
+            <sync>
+                <use>admin</use>
+                <args>
+                    <module>Bertholdo_Sync</module>
+                    <frontName>sync</frontName>
+                </args>
+            </sync>
+        </routers>
+    </admin>
+	<frontend> <!-- frontend -->
+        <translate>
+            <modules>
+                <Bertholdo_Sync>
+                    <files>
+                        <default>Bertholdo_Sync.csv</default>
+                    </files>
+                </Bertholdo_Sync>
+            </modules>
+        </translate>
+    </frontend>
+    <adminhtml> <!-- adminhtml -->
+        <translate>
+            <modules>
+                <Bertholdo_Sync>
+                    <files>
+                        <sync>Bertholdo_Sync.csv</sync>
+                    </files>
+                </Bertholdo_Sync>
+            </modules>
+        </translate>
+        <menu>
+			<mycustom_menu_sync translate="title" module="sync">
+			<title>Brt Sync</title>
+			<sort_order>80</sort_order> <!-- ando no menu do admin de 10 em 10 -->
+				<children>
+					<subitem module="sync">
+						<title><![CDATA[Synchronize Stock]]></title>
+						<sort_order>0</sort_order>
+						<action>sync/adminhtml_syncestoque</action>
+					</subitem>
+					<subitem1 module="sync">
+						<title><![CDATA[Config]]></title>
+						<sort_order>1</sort_order>
+						<action>adminhtml/system_config/edit/section/sync</action>
+					</subitem1>
+				</children>
+			</mycustom_menu_sync>
+        </menu>
+        <acl>
+            <resources>
+                <admin>
+                    <children>
+						<mycustom_menu_sync translate="title" module="sync">
+							<title>BRT SYNC</title>
+							<sort_order>80</sort_order> <!-- ando no menu do admin de 10 em 10 -->
+							<children>
+								<subitem translate="title" module="sync">
+									<title><![CDATA[Synchronize Stock]]></title>
+									<sort_order>0</sort_order>
+								</subitem>
+								<subitem1 translate="title" module="sync">
+									<title><![CDATA[Config]]></title>
+									<sort_order>1</sort_order>
+								</subitem1>
+							</children>
+						</mycustom_menu_sync>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+        <layout>
+            <updates>
+                <sync>
+                    <file>sync.xml</file>
+                </sync>
+            </updates>
+        </layout>
+    </adminhtml>
+	<default> <!-- default config modulo admin -->
+        <sync>
+            <options_sync>
+                <active>1</active>
+				<category>2</category>			
+				<validacao_de_estoque></validacao_de_estoque>
+				<percentual_atualizacao_estoque>100</percentual_atualizacao_estoque>
+            </options_sync>
+        </sync>
+    </default>
+</config>

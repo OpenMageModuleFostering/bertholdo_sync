@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<layout version="1.0.0">
+    <sync_adminhtml_syncestoque_index>
+        <update handle="sync_syncestoque_index"/>
+        <reference name="content">
+			<block type="adminhtml/template" name="syncestoque" template="sync/syncestoque.phtml"/>
+        </reference>
+    </sync_adminhtml_syncestoque_index>
+</layout>

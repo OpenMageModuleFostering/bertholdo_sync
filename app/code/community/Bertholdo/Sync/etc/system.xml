@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<config>
+	<tabs>
+        <bertholdo translate="label" module="sync">
+            <label>Bertholdo</label>
+            <sort_order>100000000</sort_order>
+        </bertholdo>
+    </tabs>
+    <sections>
+        <sync translate="label" module="sync">
+			<class>separator-top</class>
+            <label>BRT SYNC</label>
+            <tab>bertholdo</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>10</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+			<groups>
+				<options_sync translate="label comment" module="sync">
+					<label><![CDATA[Config]]></label>
+					<sort_order>20</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<fields>
+						<active translate="label">
+							<label><![CDATA[Enable]]></label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</active>
+						<category translate="label comment">
+							<label><![CDATA[Standard Category]]></label>
+							<frontend_type>select</frontend_type>
+							<source_model>Bertholdo_Sync_Helper_Data</source_model>
+							<sort_order>20</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<comment><![CDATA[When choosing a category all export is / import will be based on the same ie only the products in that category and may be updated or inserted if a new product is inserted into the CSV file if you want to export all products in the store did not modify this option. Important: To be able to export all the same products should always be recorded in the main category.]]></comment>
+						</category>
+						<validacao_de_estoque translate="label comment">
+						  <label><![CDATA[Minimum of stock]]></label>
+						  <frontend_type>text</frontend_type>
+						  <sort_order>25</sort_order>
+						  <show_in_default>1</show_in_default>
+						  <show_in_website>1</show_in_website>
+   						  <show_in_store>1</show_in_store>
+						  <comment><![CDATA[When you enter a value in only products with inferiror or equal to the entered value stock will be generated in CSV Standard, it facilitates the rescue of products with very low stock putting the same priority. Important: If the field is empty all products from this category will be redeemed regardless of the amount of stock.]]></comment>
+						</validacao_de_estoque>
+						<percentual_atualizacao_estoque translate="label comment">
+						  <label><![CDATA[Percentage (%)]]></label>
+						  <frontend_type>text</frontend_type>
+						  <sort_order>30</sort_order>
+						  <show_in_default>1</show_in_default>
+						  <show_in_website>1</show_in_website>
+   						  <show_in_store>1</show_in_store>
+						  <comment><![CDATA[Enter the percentage of updated inventory. This percentage represents the amount of inventory that will be imported into the shop with it the rest had been retained in the physical store. This control serves to differentiate the amount of product inventory in the physical store and virtual, so to fill the stock value in the CSV file always enter the total amount of product in stock.]]></comment>
+						</percentual_atualizacao_estoque>
+					</fields>
+				</options_sync>
+            </groups>
+        </sync>		
+    </sections>
+</config>

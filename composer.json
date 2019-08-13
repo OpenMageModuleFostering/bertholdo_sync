@@ -1,0 +1,17 @@
+{
+    "name": "OpenMageModuleFostering/Bertholdo_Sync",
+    "type": "magento-module",
+    "license": "GPL",
+    "homepage": "",
+    "description": "The Brt Sync module was designed by the company Bertholdo Consulting. The module has
+the purpose of assisting in the day to day management of virtual stores that do not have specialized for inventory management tools, enabling differentiation and control of the stock of physical and virtual store. Moreover, it is also possible to do the insert of new products via import.",
+    "authors": [
+    {
+        "name": "Luciano Albis",
+        "email": "lucianoalbis@yahoo.com.br"
+    }
+],
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}

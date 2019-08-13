@@ -1,0 +1,52 @@
+#-- A --
+#-- B --
+#-- C --
+"Config","Configura&ccedil;&otilde;es"
+#-- D --
+#-- E --
+"Enable","Habilitar"
+"Enter the percentage of updated inventory. This percentage represents the amount of inventory that will be imported into the shop with it the rest had been retained in the physical store. This control serves to differentiate the amount of product inventory in the physical store and virtual, so to fill the stock value in the CSV file always enter the total amount of product in stock.","Insira o percentual de atualização de estoque. Esse percentual representa a quantidade de estoque que será importada para &agrave; loja virtual, com isso o restante ficara retido na loja física. Esse controle serve para diferenciar a quantidade de estoque de produtos na loja física e na virtual, por isso ao preencher o valor do estoque no arquivo CSV sempre entre com a quantidade total do produto no estoque."
+#-- F --
+"File","Arquivo"
+"File CSV","Arquivo CSV"
+#-- G --
+"Generate CSV File Standard","Gerar Arquivo CSV Padr&atilde;o"
+#-- H --
+#-- I --
+"Import","Importar"
+"Important Information","Informa&ccedil;&otilde;es Importantes"
+#-- J --
+#-- K --
+#-- L --
+#-- M --
+"Minimum of stock","Limite m&iacute;nimo de estoque"
+#-- N --
+#-- O --
+#-- P --
+"Percentage (%)","Percentual (%)"
+#-- Q --
+#-- R --
+"Return: ERROR - Reading CSV file.","Retorno: ERRO - Leitura no arquivo CSV."
+"Return: ERROR - Sending form data.","Retorno: ERRO - Envio de dados do formul&aacute;rio."
+"Return: Import successful. <br/> Time: %s minute","Retorno: Importa&ccedil;&atilde;o realizada com sucesso. <br/> Tempo: %s minuto"
+#-- S --
+"Synchronize Stock","Sincronizar Estoque"
+"Standard Category","Categoria Padr&atilde;o"
+#-- T --
+#-- U --
+#-- V --
+#-- X --
+#-- Z --
+#----
+"Steps to use the module","Passos para utiliza&ccedil;&atilde;o do m&oacute;dulo"
+"1 - In the administration module select a category to perform the generation of the standard CSV file if you want all products not modify it;","1 - Na administra&ccedil;&atilde;o do m&oacute;dulo escolha uma categoria para realizar a gera&ccedil;&atilde;o do arquivo CSV Padr&atilde;o, caso queira todos os produtos n&atilde;o modifique a mesma;"
+"2 - Still in the administration module enter the percentage of updated stock in the store;","2 - Ainda na administra&ccedil;&atilde;o do m&oacute;dulo insira o percentual de atualiza&ccedil;&atilde;o do estoque na loja;"
+"3 - Enter the amount of stock filter, only products with lower than stock will be filtered;","3 - Insira o filtro de quantidade de estoque, somente produtos com estoque inferior ao valor ser&atilde;o filtrados;"
+"4 - Generate the CSV file in order to modify the information of the products by clicking on the button -> Generate CSV Standard;","4 - Gere o arquivo CSV para poder modificar as informa&ccedil;&otilde;es dos produtos clicando no bot&atilde;o -> Gerar arquivo CSV Padr&atilde;o;"
+"5 - After The previous step please download the CSV file to your machine and modify the values in the file;","5 - Ap&oacute;s o passo anterior efetue o download do arquivo CSV para sua m&aacute;quina e modifique os valores no arquivo;"
+"6 - After modifying select the CSV file (Select File ...) choose the modified CSV file;","6 - Ap&oacute;s modificar o arquivo CSV selecione (Selecionar arquivo...) escolha o arquivo CSV modificado;"
+"7 - Click on (Import);","7 - Click em (Importar);"
+"8 - Check the product information;","8 - Verifique as informa&ccedil;&otilde;es dos produtos;"
+"Note: For more information read the README.TXT file in the root of the module (app/code/community/Bertholdo/Sync)","Obs: Para maiores informa&ccedil;&otilde;es leia o arquivo README.TXT na raiz do m&oacute;dulo (app/code/community/Bertholdo/Sync)"
+"When you enter a value in only products with inferiror or equal to the entered value stock will be generated in CSV Standard, it facilitates the rescue of products with very low stock putting the same priority. Important: If the field is empty all products from this category will be redeemed regardless of the amount of stock.","Ao inserir um valor no campo somente os produtos com o estoque inferiror ou igual ao valor inserido serão gerados no CSV Padrão, isso facilita no resgate de produtos com estoque muito baixo colocando os mesmo com prioridade. Importante: Se o campo estiver vazio todos os produtos da categoria serão resgatados independente da quantidade de estoque."
+"When choosing a category all export is / import will be based on the same ie only the products in that category and may be updated or inserted if a new product is inserted into the CSV file if you want to export all products in the store did not modify this option. Important: To be able to export all the same products should always be recorded in the main category.","Ao escolher uma categoria toda exportação/importação será baseada na mesma ou seja apenas os produtos dessa categoria poderão ser atualizados e ou inseridos caso um novo produto seja inserido no arquivo CSV, caso queira exportar todos os produtos da loja não modifique essa opção. Importante: Para que se possa exportar todos os produtos os mesmo sempre devem ser registrados na categoria principal."

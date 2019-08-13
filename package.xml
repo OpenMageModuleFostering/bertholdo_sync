@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package>
+    <name>Bertholdo_Sync</name>
+    <version>1.0.3</version>
+    <stability>stable</stability>
+    <license>GPL</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>The Brt Sync module was designed by the company Bertholdo Consulting. The module has&#xD;
+the purpose of assisting in the day to day management of virtual stores that do not have specialized for inventory management tools, enabling differentiation and control of the stock of physical and virtual store. Moreover, it is also possible to do the insert of new products via import.</summary>
+    <description>The process is very simple, just generate the CSV file based on the filters of the module and modify the information of the products. If you want to register a product through the file, just enter the information yourself, always remembering to follow the format of the file and perform their import via administration. We created a video that demonstrates the use of the module followed all necessary steps to facilitate the use.</description>
+    <notes>Revised Version.</notes>
+    <authors><author><name>Luciano Albis</name><user>lucianoalbis</user><email>lucianoalbis@yahoo.com.br</email></author><author><name>Bertholdo Consultoria</name><user>bertholdo</user><email>bertholdo@bertholdo.com.br</email></author></authors>
+    <date>2014-07-15</date>
+    <time>15:23:40</time>
+    <contents><target name="mageetc"><dir name="modules"><file name="Bertholdo_Sync.xml" hash=""/></dir></target><target name="magelocale"><dir name="pt_BR"><file name="Bertholdo_Sync.csv" hash=""/></dir></target><target name="magecommunity"><dir name="Bertholdo"><dir name="Sync"><dir name="Helper"><file name="Data.php" hash="bf9464fcefdedec0e243dd90ac148c83"/></dir><file name="README.TXT" hash="d1f04dc2a5df13ed8f9d8c39e22ca697"/><dir name="controllers"><dir name="Adminhtml"><file name="SyncestoqueController.php" hash="913640a39ae3d59034a7112cd861f277"/></dir></dir><dir name="etc"><file name="adminhtml.xml" hash="271cb0b7e6fd903f7502cb0fcf0621f1"/><file name="config.xml" hash="65b654e89ee45a69ef574be4b0e3f15a"/><file name="system.xml" hash="eb37fa142a2411e8e16b2ee886f47d3e"/></dir><dir name="sql"><dir name="sync_setup"><file name="mysql4-install-1.0.0.php" hash="32c01ba72925465a3a437f41ffb9e4ee"/></dir></dir></dir></dir></target><target name="magedesign"><dir name="adminhtml"><dir name="default"><dir name="default"><dir name="layout"><file name="sync.xml" hash=""/></dir><dir name="template"><dir name="sync"><file name="syncestoque.phtml" hash=""/></dir></dir></dir></dir></dir></target><target name="mageskin"><dir name="adminhtml"><dir name="default"><dir name="default"><dir name="Bertholdo"><file name="logo_brtsync.jpg" hash=""/></dir></dir></dir></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.3.5</min><max>5.5.0</max></php></required></dependencies>
+</package>

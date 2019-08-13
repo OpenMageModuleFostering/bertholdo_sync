@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<Bertholdo_Sync>
+			<active>true</active>
+			<codePool>community</codePool>
+		</Bertholdo_Sync>
+	</modules>
+</config>

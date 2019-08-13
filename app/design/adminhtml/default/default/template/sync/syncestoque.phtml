@@ -1,0 +1,71 @@
+<style>
+.logo {float:left; padding:0 0px 20px 0}
+.brtSyncDir {float:left; padding:0 0px 0px 5px}
+</style>
+<div class="content-header">
+    <table cellspacing="0" class="grid-header">
+        <tr>
+            <td><h3><?php   echo $this->__('Synchronize Stock'); ?></h3></td>
+	    <td class="a-right">
+	    	<button onclick="formExportacaoCsvPadrao.submit()" class="scalable save" type="button"><span><?php   echo $this->__('Generate CSV File Standard'); ?></span></button>
+	    </td>
+        </tr>
+    </table>
+</div>
+<div class='logo'>
+	<img src="<?php echo $this->getSkinUrl('Bertholdo/logo_brtsync.jpg'); ?>" alt="Brt Sync">	
+</div>
+<div class="entry-edit brtSyncDir">
+    <form id="form_importacao_csv" name="form_importacao_csv" method="post" action="<?php echo $this->getUrl('*/*/importacaoCsv'); ?>" enctype="multipart/form-data">
+        <input name="form_key" type="hidden" value="<?php echo Mage::getSingleton('core/session')->getFormKey(); ?>" />
+        <h4 class="icon-head fieldset-legend"><?php   echo $this->__('Import'); ?> 
+	<br/> <br/>
+
+	<?php   echo $this->__('Steps to use the module'); ?>
+	<br/><br/>
+	<?php   echo $this->__('1 - In the administration module select a category to perform the generation of the standard CSV file if you want all products not modify it;'); ?>
+	<br/>
+	<?php   echo $this->__('2 - Still in the administration module enter the percentage of updated stock in the store;'); ?>
+	<br/>
+	<?php   echo $this->__('3 - Enter the amount of stock filter, only products with lower than stock will be filtered;'); ?>
+	<br/>
+	<?php   echo $this->__('4 - Generate the CSV file in order to modify the information of the products by clicking on the button -> Generate CSV Standard;'); ?>
+	<br/>
+	<?php   echo $this->__('5 - After The previous step please download the CSV file to your machine and modify the values in the file;'); ?>
+	<br/>
+	<?php   echo $this->__('6 - After modifying select the CSV file (Select File ...) choose the modified CSV file;'); ?>
+	<br/>
+	<?php   echo $this->__('7 - Click on (Import);'); ?>
+	<br/>
+	<?php   echo $this->__('8 - Check the product information;'); ?>
+	<br/><br/>
+	<?php   echo $this->__('Note: For more information read the README.TXT file in the root of the module (app/code/community/Bertholdo/Sync)'); ?>
+
+	</h4>
+	<br />
+        <fieldset id="my-fieldset">
+            <table cellspacing="0" class="form-list">
+                <tr>
+                    <td class="label"><h4><?php   echo $this->__('File'); ?><span class="required"></span><h4></td>
+                    <td class="input-ele">		    
+			    <ul class="form-list">
+				<li>
+				    <label class="required"><em>*</em><?php   echo $this->__('File CSV'); ?><span id='file_upload_text'></span></label>
+				    <div class="input-box"><input id="file_upload" type="file" name="file_upload" /></div>
+				    <br/>
+				    <button onclick="formImportacaoCsv.submit()" class="scalable save" type="button"><span><?php   echo $this->__('Import'); ?></span></button>
+				</li>
+			    </ul>
+		    </td>		    
+                </tr>
+            </table>
+        </fieldset>
+    </form>
+    <form id="form_exportacao_csv_padrao" name="form_exportacao_csv_padrao" method="post" action="<?php echo $this->getUrl('*/*/exportacaoCsv'); ?>">
+        <input name="form_key" type="hidden" value="<?php echo Mage::getSingleton('core/session')->getFormKey(); ?>" />        
+    </form>
+</div>
+<script type="text/javascript">
+    var formImportacaoCsv = new varienForm('form_importacao_csv');
+    var formExportacaoCsvPadrao = new varienForm('form_exportacao_csv_padrao');
+</script>
